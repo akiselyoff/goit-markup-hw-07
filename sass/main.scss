@@ -2,8 +2,10 @@
 @import './utils/normalize';
 @import './utils/reset';
 @import './utils/visually-hidden';
+@import './utils/placeholders';
 
 //main
+@import './components/body';
 @import './components/section';
 @import './components/container';
 @import './components/header';

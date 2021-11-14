@@ -56,7 +56,7 @@
 }
 .button-close:hover,
 .button-close:focus {
-  fill: var(--active-text-color);
+  fill: var(--accent-color);
 }
 .modal-form-title {
   margin: 0 0 12px 0;
@@ -105,13 +105,13 @@
 .modal-form-list-item input:focus,
 .modal-form-list-item textarea:hover,
 .modal-form-list-item textarea:focus {
-  border: 1px solid var(--active-text-color);
+  border: 1px solid var(--accent-color);
   cursor: pointer;
 }
 
 .modal-form-list-item input:hover + .icon,
 .modal-form-list-item input:focus + .icon {
-  fill: var(--active-text-color);
+  fill: var(--accent-color);
 }
 .modal-form-list-item .icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -156,8 +156,8 @@
   border-radius: 2px;
 }
 .agreement-input:checked + .icon-check {
-  border: 2px solid var(--active-text-color);
-  background-color: var(--active-text-color);
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
   background-image: url(../images/check.svg);
   background-size: contain;
   background-origin: border-box;
@@ -165,10 +165,10 @@
 .agreement-link {
   display: inline-block;
   margin-left: 4px;
-  color: var(--active-text-color);
+  color: var(--accent-color);
   text-decoration: none;
   line-height: 1;
-  border-bottom: 1px solid var(--active-text-color);
+  border-bottom: 1px solid var(--accent-color);
 }
 .modal-btn {
   padding: 10px 55px 10px 56px;
