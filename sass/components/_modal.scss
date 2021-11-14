@@ -1,0 +1,183 @@
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  background-color: var(--prime-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--prime-background-color);
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal .icon-close {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+.button-close:hover,
+.button-close:focus {
+  fill: var(--active-text-color);
+}
+.modal-form-title {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+.modal-form-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: var(--prime-text-color);
+}
+.modal-form-list-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.modal-form-list-item:last-child {
+  margin: 0;
+}
+.modal-form-list-item label {
+  margin-right: auto;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.modal-form-list-item input,
+.modal-form-list-item textarea {
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-list-item input {
+  padding-left: 42px;
+}
+.modal-form-list-item input:hover,
+.modal-form-list-item input:focus,
+.modal-form-list-item textarea:hover,
+.modal-form-list-item textarea:focus {
+  border: 1px solid var(--active-text-color);
+  cursor: pointer;
+}
+
+.modal-form-list-item input:hover + .icon,
+.modal-form-list-item input:focus + .icon {
+  fill: var(--active-text-color);
+}
+.modal-form-list-item .icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.comments {
+  padding: 12px 16px;
+}
+.comments::placeholder {
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-list-item textarea {
+  height: 120px;
+}
+
+.agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--prime-text-color);
+}
+.agreement-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.icon-check {
+  margin-right: 7px;
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 2px;
+}
+.agreement-input:checked + .icon-check {
+  border: 2px solid var(--active-text-color);
+  background-color: var(--active-text-color);
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.agreement-link {
+  display: inline-block;
+  margin-left: 4px;
+  color: var(--active-text-color);
+  text-decoration: none;
+  line-height: 1;
+  border-bottom: 1px solid var(--active-text-color);
+}
+.modal-btn {
+  padding: 10px 55px 10px 56px;
+}
+.modal-form-list-item .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
